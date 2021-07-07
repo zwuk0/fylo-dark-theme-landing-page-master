@@ -1,0 +1,77 @@
+@use 'variables' as v;
+
+.callout-card {
+  position: absolute;
+  top: -210px;
+  padding: 60px 40px 60px 40px;
+
+  width: 375px;
+  color: v.$Neutral;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.267);
+  background-color: v.$Primary1;
+  p {
+    margin-top: 1em;
+  }
+}
+.callout-form {
+  input {
+    margin-top: 2em;
+    width: 100%;
+    padding: 15px 25px 15px 25px;
+    border-radius: 25px;
+    border: none;
+    &::placeholder {
+      color: rgba(0, 0, 0, 0.445);
+    }
+  }
+  button {
+    width: 100%;
+    border-radius: 25px;
+  }
+}
+.fo-logo {
+  img {
+    width: 100px;
+  }
+}
+.fo-text {
+  margin-top: 250px;
+  width: 350px;
+  color: v.$Neutral;
+  .fo {
+    display: flex;
+    margin-top: 4em;
+    img {
+      width: 25px;
+      height: 25px;
+      margin-right: 10px;
+    }
+  }
+  .fo:not(:first-child) {
+    margin-top: 2em;
+  }
+}
+
+.footer-social {
+  margin-top: 50px;
+  display: flex;
+  .s-icon {
+    display: grid;
+    place-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    border: 1px solid v.$Neutral;
+    margin: 10px;
+    cursor: pointer;
+    svg {
+      width: 15px;
+      height: 15px;
+      path {
+        fill: v.$Neutral;
+      }
+    }
+  }
+}

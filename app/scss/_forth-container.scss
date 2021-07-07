@@ -1,0 +1,59 @@
+@use 'variables' as v;
+
+.forth-container {
+  display: grid;
+  place-items: center;
+  margin-top: 150px;
+  font-size: 12px;
+  position: relative;
+}
+.testimonial-card {
+  color: v.$Neutral;
+  width: 320px;
+  padding: 25px;
+  border-radius: 5px;
+  background-color: v.$Primary4;
+  .tc-profile {
+    display: flex;
+    margin-top: 2em;
+    img {
+      width: 32px;
+      height: auto;
+      border-radius: 16px;
+      margin-right: 1em;
+    }
+    .tc-name {
+      p {
+        font-size: 10px;
+      }
+    }
+  }
+}
+.testimonial-card:not(:first-child) {
+  margin-top: 3em;
+}
+.forth-container::before {
+  content: " ";
+  position: absolute;
+  top: -3.5%;
+  left: 15%;
+  width: 7%;
+  height: 7%;
+  z-index: -1;
+  background-image: url("/images/bg-quotes.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.forth-container::after {
+  content: " ";
+  position: absolute;
+  bottom: -3.5%;
+  right: 15%;
+  width: 7%;
+  height: 7%;
+  z-index: -1;
+  background-image: url("/images/bg-quotes.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: rotateX(180deg) rotateY(180deg);
+}

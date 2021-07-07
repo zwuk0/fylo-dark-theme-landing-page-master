@@ -1,0 +1,55 @@
+@use 'variables' as v;
+
+.second-container {
+  width: 100%;
+  display: flex;
+  margin-top: 100px;
+  display: grid;
+  place-items: center;
+}
+.cards {
+  width: 315px;
+  height: 200px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: v.$Neutral;
+  font-size: 14px;
+  img {
+    width: 60px;
+  }
+  h3 {
+    margin-top: 2.5em;
+  }
+  p {
+    margin-top: 10px;
+  }
+}
+.cards:not(:first-child) {
+  margin-top: 80px;
+}
+
+@media only screen and (min-width: v.$tablet) {
+  .cards-wrap {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+  }
+
+  .cards:not(:first-child) {
+    margin-top: 0;
+    &:nth-child(2) {
+      margin-left: 50px;
+      img {
+        width: 43px;
+      }
+    }
+    &:nth-child(3) {
+      margin-top: 50px;
+    }
+    &:nth-child(4) {
+      margin-top: 50px;
+      margin-left: 50px;
+    }
+  }
+}

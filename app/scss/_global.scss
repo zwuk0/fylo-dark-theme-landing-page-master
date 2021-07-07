@@ -1,0 +1,46 @@
+@use 'variables' as v;
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  // height: 100vh;
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+  font-family: v.$font1;
+  line-height: 1.5;
+  background-color: v.$Primary2;
+}
+header {
+  display: grid;
+  place-items: center;
+  padding-top: 35px;
+  padding-bottom: 35px;
+
+  width: 100%;
+  background-color: v.$Primary1;
+}
+a {
+  color: v.$Neutral;
+  text-decoration: none;
+}
+footer {
+  width: 100%;
+  margin-top: 400px;
+  background-color: v.$Primary3;
+  position: relative;
+  display: grid;
+  place-items: center;
+  padding-bottom: 50px;
+}

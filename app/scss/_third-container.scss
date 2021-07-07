@@ -1,0 +1,69 @@
+@use 'variables' as v;
+
+.third-container {
+  margin-top: 100px;
+  display: grid;
+  place-items: center;
+  width: 100%;
+}
+.tc-img img {
+  width: 300px;
+}
+.tc-text {
+  color: v.$Neutral;
+  width: 72%;
+  h3 {
+    margin-top: 3em;
+  }
+  p {
+    margin-top: 1em;
+  }
+  a {
+    margin-top: 2em;
+    color: v.$Cyan;
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-left: 5px;
+      width: 20px;
+      padding: 0;
+    }
+  }
+
+  hr {
+    margin-top: 5px;
+    width: 150px;
+    color: v.$Cyan;
+  }
+}
+
+@media only screen and (min-width: v.$tablet) {
+  .third-container {
+    margin-top: 150px;
+    display: flex;
+    place-items: center;
+    max-width: 900px;
+    width: 100%;
+  }
+  .tc-img img {
+    width: 100%;
+    max-width: 500px;
+  }
+  .tc-text {
+    margin-left: 50px;
+    width: 68%;
+    hr {
+      margin-top: 5px;
+      width: 150px;
+      color: v.$Cyan;
+    }
+  }
+}
+
+.a-toggle {
+  color: hsl(0, 0%, 100%);
+}
+.hr-toggle {
+  color: hsl(0, 0%, 100%);
+}
