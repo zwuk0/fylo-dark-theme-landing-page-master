@@ -115,7 +115,7 @@ footer {
 
 .first-container {
   width: 100%;
-  background: url("/images/bg-mobile2.svg"), #1c2431;
+  background: url("../../images/bg-mobile2.svg"), #1c2431;
   background-repeat: no-repeat;
   background-size: 100%;
   background-position-y: 290px;
