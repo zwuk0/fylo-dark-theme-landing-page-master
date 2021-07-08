@@ -387,7 +387,7 @@ footer {
   }
 
   .card1,
-.card3 {
+  .card3 {
     position: relative;
   }
 
@@ -564,7 +564,7 @@ footer {
   }
 
   .linkone,
-.linktwo {
+  .linktwo {
     display: grid;
     margin-left: 10px;
     margin-right: 10px;
