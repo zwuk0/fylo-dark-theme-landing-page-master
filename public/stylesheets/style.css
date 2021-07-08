@@ -387,7 +387,7 @@ footer {
   }
 
   .card1,
-  .card3 {
+.card3 {
     position: relative;
   }
 
@@ -399,7 +399,7 @@ footer {
     width: 15%;
     height: 15%;
     z-index: -1;
-    background-image: url("/images/bg-quotes.png");
+    background-image: url("../images/bg-quotes.png");
     background-repeat: no-repeat;
     background-size: contain;
   }
@@ -412,7 +412,7 @@ footer {
     width: 15%;
     height: 15%;
     z-index: -1;
-    background-image: url("/images/bg-quotes.png");
+    background-image: url("../images/bg-quotes.png");
     background-repeat: no-repeat;
     background-size: contain;
     transform: rotateY(180deg) rotateX(180deg);
@@ -564,7 +564,7 @@ footer {
   }
 
   .linkone,
-  .linktwo {
+.linktwo {
     display: grid;
     margin-left: 10px;
     margin-right: 10px;
