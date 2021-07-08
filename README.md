@@ -4,5 +4,4 @@
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://zwuk0.github.io/fylo-dark-theme-landing-page-master/](https://zwuk0.github.io/fylo-dark-theme-landing-page-master/)
