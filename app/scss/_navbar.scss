@@ -1,9 +1,10 @@
+@use 'variables' as v;
 .navbar {
   padding-left: 35px;
   padding-right: 35px;
   width: 100%;
   display: flex;
-  max-width: 800px;
+
   justify-content: space-between;
   margin-right: 22px;
   margin-left: 22px;
@@ -14,4 +15,16 @@
 }
 .nav-link:not(:last-child) {
   margin-right: 15px;
+}
+
+@media only screen and (min-width: v.$tablet) {
+  .logo {
+    width: 100px;
+  }
+  .nav-link {
+    font-size: 16px;
+  }
+  .nav-link:not(:last-child) {
+    margin-right: 50px;
+  }
 }

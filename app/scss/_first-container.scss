@@ -1,8 +1,8 @@
-@use 'variables';
+@use 'variables' as v;
 
 .first-container {
   padding-top: 30px;
-  color: variables.$Neutral;
+  color: v.$Neutral;
   display: grid;
   place-items: center;
   text-align: center;
@@ -21,75 +21,86 @@
     line-height: 1.8;
     margin-bottom: 0;
   }
-  // background-color: variables.$Primary1;
-  // padding-bottom: 100px;
-  // background: url(variables.$Bg-mobile), variables.$Primary1;
-  // background-repeat: no-repeat;
-  // background-position: bottom;
-  // background-size: 650px 300px, cover;
-  // background: url(variables.$Bg-mobile),
-  //   linear-gradient(180deg, variables.$Primary1 60%, variables.$Primary2 60%);
-  // background-repeat: no-repeat, no-repeat;
-  // background-size: 100%, cover;
 
-  // background-position: center 230px, center;
-}
-// .first-container::after {
-//   content: "";
-//   position: absolute;
-//   bottom: 40%;
-//   width: 100%;
-//   height: 100%;
-//   background: url(variables.$Bg-mobile), variables.$Primary1;
-//   background-size: 100% 130px;
-//   background-repeat: no-repeat;
-//   background-position: bottom;
-//   z-index: -1;
-// }
+  .intro-img {
+    width: 90%;
+    max-width: 500px;
+  }
 
-.intro-img {
-  width: 90%;
-  max-width: 500px;
+  .btn {
+    margin-top: 30px;
+    padding: 15px;
+    width: 250px;
+    border-radius: 20px;
+    border: none;
+    font-size: 16px;
+    color: v.$Neutral;
+    background: linear-gradient(to right, v.$Cyan, v.$Blue);
+  }
 }
 
-.btn {
-  margin-top: 30px;
-  padding: 15px;
-  width: 250px;
-  border-radius: 20px;
-  border: none;
-  font-size: 16px;
-  color: variables.$Neutral;
-  background: linear-gradient(to right, variables.$Cyan, variables.$Blue);
+.first-container {
+  width: 100%;
+  background: url("/images/bg-mobile2.svg"), v.$Primary1;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position-y: 290px;
 }
 
-// @media only screen and (min-width: variables.$mobile) {
-//   .first-container {
-//     background: url(variables.$Bg-mobile),
-//       linear-gradient(180deg, variables.$Primary1 70%, variables.$Primary2 80%);
-//     background-repeat: no-repeat, no-repeat;
-//     background-size: 100%, cover;
+@media only screen and (min-width: v.$tablet) {
+  .first-container {
+    padding-top: 30px;
+    color: v.$Neutral;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    position: relative;
+    h1 {
+      margin-top: 30px;
+      font-size: 26px;
+      margin-bottom: 0;
+      width: 100%;
+      max-width: 450px;
+    }
+    p {
+      margin-top: 16px;
+      width: 100%;
+      max-width: 420px;
+      line-height: 1.8;
+      margin-bottom: 0;
+    }
 
-//     background-position: center 300px, center;
-//   }
-// }
-// @media only screen and (min-width: variables.$tablet) {
-//   .first-container {
-//     background: url(variables.$Bg-mobile),
-//       linear-gradient(180deg, variables.$Primary1 85%, variables.$Primary2 95%);
-//     background-repeat: no-repeat, no-repeat;
-//     background-size: 100%, cover;
+    .intro-img {
+      width: 100%;
+      max-width: 500px;
+    }
 
-//     background-position: center 380px, center;
-//   }
-// }
-// @media only screen and (min-width: variables.$desktop) {
-//   .first-container {
-//     background: url(variables.$Bg-desktop), variables.$Primary1;
-//     background-repeat: no-repeat, no-repeat;
-//     background-size: 100%, cover;
-
-//     background-position: center 380px, center;
-//     padding-bottom: 50px;
-//   }
-// }
+    .btn {
+      margin-top: 30px;
+      padding: 15px;
+      width: 250px;
+      border-radius: 20px;
+      border: none;
+      font-size: 16px;
+      color: v.$Neutral;
+      background: linear-gradient(to right, v.$Cyan, v.$Blue);
+    }
+  }
+  .first-container {
+    width: 100%;
+    background: url(v.$Bg-desktop), v.$Primary1;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+  }
+}
+@media only screen and (min-width: v.$desktop) {
+  .first-container {
+    width: 100%;
+    background: url(v.$Bg-desktop), v.$Primary1;
+    background-repeat: no-repeat;
+    background-size: 100% 50%;
+    background-position: bottom;
+    padding-bottom: 200px;
+  }
+}

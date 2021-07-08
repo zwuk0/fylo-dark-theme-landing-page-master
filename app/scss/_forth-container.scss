@@ -32,28 +32,78 @@
 .testimonial-card:not(:first-child) {
   margin-top: 3em;
 }
-.forth-container::before {
+.card1::before {
   content: " ";
   position: absolute;
   top: -3.5%;
-  left: 15%;
-  width: 7%;
-  height: 7%;
+  left: 2%;
+  width: 10%;
+  height: 10%;
   z-index: -1;
   background-image: url("/images/bg-quotes.png");
   background-repeat: no-repeat;
   background-size: contain;
 }
-.forth-container::after {
+.card3::after {
   content: " ";
   position: absolute;
   bottom: -3.5%;
-  right: 15%;
-  width: 7%;
-  height: 7%;
+  right: 2%;
+  width: 10%;
+  height: 10%;
   z-index: -1;
   background-image: url("/images/bg-quotes.png");
   background-repeat: no-repeat;
   background-size: contain;
-  transform: rotateX(180deg) rotateY(180deg);
+  transform: rotateY(180deg) rotateX(180deg);
+}
+
+@media only screen and (min-width: v.$tablet) {
+  .forth-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 150px;
+    font-size: 12px;
+    position: relative;
+  }
+  .testimonial-card:not(:first-child) {
+    margin-top: auto;
+  }
+  .forth-container::after {
+    display: none;
+  }
+  .testimonial-card {
+    margin: 20px;
+  }
+  .card1,
+  .card3 {
+    position: relative;
+  }
+  .card1::before {
+    content: " ";
+    position: absolute;
+    top: -12%;
+    left: 2%;
+    width: 15%;
+    height: 15%;
+    z-index: -1;
+    background-image: url("/images/bg-quotes.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .card3::after {
+    content: " ";
+    position: absolute;
+    bottom: -12%;
+    right: 2%;
+    width: 15%;
+    height: 15%;
+    z-index: -1;
+    background-image: url("/images/bg-quotes.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: rotateY(180deg) rotateX(180deg);
+  }
 }

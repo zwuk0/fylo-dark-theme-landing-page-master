@@ -49,7 +49,6 @@ footer {
   padding-right: 35px;
   width: 100%;
   display: flex;
-  max-width: 800px;
   justify-content: space-between;
   margin-right: 22px;
   margin-left: 22px;
@@ -64,6 +63,19 @@ footer {
   margin-right: 15px;
 }
 
+@media only screen and (min-width: 768px) {
+  .logo {
+    width: 100px;
+  }
+
+  .nav-link {
+    font-size: 16px;
+  }
+
+  .nav-link:not(:last-child) {
+    margin-right: 50px;
+  }
+}
 .first-container {
   padding-top: 30px;
   color: white;
@@ -86,13 +98,11 @@ footer {
   line-height: 1.8;
   margin-bottom: 0;
 }
-
-.intro-img {
+.first-container .intro-img {
   width: 90%;
   max-width: 500px;
 }
-
-.btn {
+.first-container .btn {
   margin-top: 30px;
   padding: 15px;
   width: 250px;
@@ -103,6 +113,70 @@ footer {
   background: linear-gradient(to right, #65e2d9, #339ecc);
 }
 
+.first-container {
+  width: 100%;
+  background: url("/images/bg-mobile2.svg"), #1c2431;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position-y: 290px;
+}
+
+@media only screen and (min-width: 768px) {
+  .first-container {
+    padding-top: 30px;
+    color: white;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    position: relative;
+  }
+  .first-container h1 {
+    margin-top: 30px;
+    font-size: 26px;
+    margin-bottom: 0;
+    width: 100%;
+    max-width: 450px;
+  }
+  .first-container p {
+    margin-top: 16px;
+    width: 100%;
+    max-width: 420px;
+    line-height: 1.8;
+    margin-bottom: 0;
+  }
+  .first-container .intro-img {
+    width: 100%;
+    max-width: 500px;
+  }
+  .first-container .btn {
+    margin-top: 30px;
+    padding: 15px;
+    width: 250px;
+    border-radius: 20px;
+    border: none;
+    font-size: 16px;
+    color: white;
+    background: linear-gradient(to right, #65e2d9, #339ecc);
+  }
+
+  .first-container {
+    width: 100%;
+    background: url("/images/bg-curvy-desktop.svg"), #1c2431;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .first-container {
+    width: 100%;
+    background: url("/images/bg-curvy-desktop.svg"), #1c2431;
+    background-repeat: no-repeat;
+    background-size: 100% 50%;
+    background-position: bottom;
+    padding-bottom: 200px;
+  }
+}
 .second-container {
   width: 100%;
   display: flex;
@@ -156,6 +230,16 @@ footer {
   .cards:not(:first-child):nth-child(4) {
     margin-top: 50px;
     margin-left: 50px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .second-container {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .cards-wrap {
+    margin-top: 0;
   }
 }
 .third-container {
@@ -220,14 +304,6 @@ footer {
     color: #65e2d9;
   }
 }
-.a-toggle {
-  color: white;
-}
-
-.hr-toggle {
-  color: white;
-}
-
 .forth-container {
   display: grid;
   place-items: center;
@@ -261,33 +337,87 @@ footer {
   margin-top: 3em;
 }
 
-.forth-container::before {
+.card1::before {
   content: " ";
   position: absolute;
   top: -3.5%;
-  left: 15%;
-  width: 7%;
-  height: 7%;
+  left: 2%;
+  width: 10%;
+  height: 10%;
   z-index: -1;
   background-image: url("/images/bg-quotes.png");
   background-repeat: no-repeat;
   background-size: contain;
 }
 
-.forth-container::after {
+.card3::after {
   content: " ";
   position: absolute;
   bottom: -3.5%;
-  right: 15%;
-  width: 7%;
-  height: 7%;
+  right: 2%;
+  width: 10%;
+  height: 10%;
   z-index: -1;
   background-image: url("/images/bg-quotes.png");
   background-repeat: no-repeat;
   background-size: contain;
-  transform: rotateX(180deg) rotateY(180deg);
+  transform: rotateY(180deg) rotateX(180deg);
 }
 
+@media only screen and (min-width: 768px) {
+  .forth-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 150px;
+    font-size: 12px;
+    position: relative;
+  }
+
+  .testimonial-card:not(:first-child) {
+    margin-top: auto;
+  }
+
+  .forth-container::after {
+    display: none;
+  }
+
+  .testimonial-card {
+    margin: 20px;
+  }
+
+  .card1,
+.card3 {
+    position: relative;
+  }
+
+  .card1::before {
+    content: " ";
+    position: absolute;
+    top: -12%;
+    left: 2%;
+    width: 15%;
+    height: 15%;
+    z-index: -1;
+    background-image: url("/images/bg-quotes.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .card3::after {
+    content: " ";
+    position: absolute;
+    bottom: -12%;
+    right: 2%;
+    width: 15%;
+    height: 15%;
+    z-index: -1;
+    background-image: url("/images/bg-quotes.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: rotateY(180deg) rotateX(180deg);
+  }
+}
 .callout-card {
   position: absolute;
   top: -210px;
@@ -315,6 +445,14 @@ footer {
 }
 .callout-form button {
   width: 100%;
+  margin-top: 30px;
+  padding: 15px;
+  max-width: 250px;
+  border-radius: 20px;
+  border: none;
+  font-size: 16px;
+  color: white;
+  background: linear-gradient(to right, #65e2d9, #339ecc);
   border-radius: 25px;
 }
 
@@ -339,6 +477,9 @@ footer {
 .fo-text .fo:not(:first-child) {
   margin-top: 2em;
 }
+.fo-text .location {
+  max-width: 400px;
+}
 
 .footer-social {
   margin-top: 50px;
@@ -360,6 +501,93 @@ footer {
 }
 .footer-social .s-icon svg path {
   fill: white;
+}
+
+.li-li-wrap {
+  margin-left: 50px;
+  display: none;
+  margin-top: 56px;
+}
+
+.linkone,
+.linktwo {
+  display: grid;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .callout-card {
+    position: absolute;
+    top: -150px;
+    padding: 60px 40px 60px 40px;
+    width: 60%;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.267);
+    background-color: #1c2431;
+  }
+  .callout-card p {
+    margin-top: 1em;
+  }
+
+  .callout-form {
+    display: flex;
+  }
+  .callout-form input {
+    width: 50%;
+  }
+  .callout-form button {
+    width: 50%;
+  }
+
+  .fo-text {
+    width: 80%;
+    display: grid;
+  }
+
+  .ph-em-wrap {
+    margin-left: 20px;
+  }
+
+  .lo-ph-em-wrap {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .li-li-wrap {
+    margin-left: 100px;
+    display: flex;
+    margin-top: 56px;
+  }
+
+  .linkone,
+.linktwo {
+    display: grid;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .callout-form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .callout-form input {
+    max-width: 600px;
+  }
+  .callout-form button {
+    margin-left: 20px;
+    width: 50%;
+    max-width: 200px;
+  }
+
+  .footer-social {
+    margin-left: 50px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
